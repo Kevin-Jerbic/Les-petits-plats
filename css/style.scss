@@ -57,6 +57,24 @@
         flex-direction: column;
         padding-top: 1.8rem;
 
+        .no-result {
+            width: 100%;
+            height: 7.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 45px;
+            p {
+                background-color: rgba(27, 27, 27, 0.7);
+                font-family: $font-secondary;
+                font-size: $font-medium;
+                color: $primary-color;
+                font-weight: bold;
+                border: 3px solid $primary-color;
+                padding: 1rem;
+            }
+        }
+
         form {
             .input__wrapper {
                 display: flex;
@@ -241,22 +259,6 @@
                 i {
                     cursor: pointer;
                 }
-            }
-        }
-
-        .no-result {
-            width: 100%;
-            height: 7.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            p {
-                font-family: $font-secondary;
-                font-size: $font-medium;
-                color: $secondary-color;
-                font-weight: bold;
-                border: 3px solid $primary-color;
-                padding: 1rem;
             }
         }
     }
