@@ -59,8 +59,8 @@ export function displayNoResult(searchTerm) {
     const noResultsDiv = document.createElement('div');
     noResultsDiv.classList.add('no-result');
     const textNoResult = document.createElement('p');
-    textNoResult.innerText = `« Aucune recette ne contient ‘${searchTerm}’ vous pouvez chercher «
-  tarte aux pommes », « poisson », etc.`;
+    textNoResult.innerText = `« Aucune recette ne contient ‘${searchTerm}’, vous pouvez 
+    chercher «tarte aux pommes », « poisson », etc...`;
     noResultsDiv.appendChild(textNoResult);
     parentElt.appendChild(noResultsDiv);
 }
