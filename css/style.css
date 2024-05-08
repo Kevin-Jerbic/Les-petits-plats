@@ -59,6 +59,23 @@
   flex-direction: column;
   padding-top: 1.8rem;
 }
+.header__searchbar .no-result {
+  width: 100%;
+  height: 7.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 45px;
+}
+.header__searchbar .no-result p {
+  background-color: rgba(27, 27, 27, 0.7);
+  font-family: "Manrope", sans-serif;
+  font-size: 1.313rem;
+  color: #ffd15b;
+  font-weight: bold;
+  border: 3px solid #ffd15b;
+  padding: 1rem;
+}
 .header__searchbar form .input__wrapper {
   display: flex;
   align-items: center;
@@ -238,21 +255,6 @@
 }
 #main_content .tags__wrapper div button i {
   cursor: pointer;
-}
-#main_content .tags__wrapper .no-result {
-  width: 100%;
-  height: 7.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#main_content .tags__wrapper .no-result p {
-  font-family: "Manrope", sans-serif;
-  font-size: 1.313rem;
-  color: #1b1b1b;
-  font-weight: bold;
-  border: 3px solid #ffd15b;
-  padding: 1rem;
 }
 #main_content .recipes__wrapper {
   display: flex;
