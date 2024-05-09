@@ -1,1 +1,2 @@
-export let tagsList = []; // Selected tags array
+// Selected tags array
+export let tagsList = []; 

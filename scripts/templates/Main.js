@@ -11,7 +11,6 @@ export class Main {
     /**
      * Create the main content of the application, including filters, tags, and recipes.
      *
-     * @async
      * @returns {Object} - An object containing DOM elements for filters, tags, and recipes.
      */
     async createMain() {
@@ -31,3 +30,4 @@ export class Main {
         return { $filtersWrapper, $tagsWrapper, $recipesWrapper };
     }
 }
+

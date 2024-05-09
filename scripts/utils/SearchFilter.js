@@ -1,3 +1,4 @@
+// Responsible for filtering recipes based on search terms and tags.
 export class SearchFilter {
     constructor(dataRecipes) {
         this.fullRecipesData = dataRecipes;
@@ -59,10 +60,12 @@ export class SearchFilter {
 
         if (searchTags.length > 0) {
             for (let recipe of recipesToFilter) {
-                let allTagsFound = true; // Indicator to check if all tags are present in the recipe
+                // Indicator to check if all tags are present in the recipe
+                let allTagsFound = true; 
 
                 for (let searchTag of searchTags) {
-                    let tagFoundInRecipe = false; // Indicator to check if the tag is present in the recipe
+                    // Indicator to check if the tag is present in the recipe
+                    let tagFoundInRecipe = false; 
 
                     // Check if the tag is found in the ingredients of the recipe
                     for (let ingredient of recipe.ingredients) {

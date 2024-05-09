@@ -36,6 +36,7 @@ export class FiltersWrapper {
         const $span = document.createElement('span');
         $span.classList.add('filter__counter__span');
 
+        // Display the number of recipes found.
         if (numberOfRecipes === 1 || numberOfRecipes === 0) {
             $span.textContent = numberOfRecipes + ' recette';
         } else {

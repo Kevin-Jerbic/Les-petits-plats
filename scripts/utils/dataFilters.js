@@ -20,17 +20,23 @@ export function filterRecipeData(recipes) {
      * @returns {string} A new string with the first letter capitalized.
      */
     function capitalizeFirstLetter(string) {
+        // Get the first character of the string and convert it to uppercase.
         const firstLetterCapitalized = string.charAt(0).toUpperCase();
+        // Get the rest of the string from the second character.
         const restOfString = string.slice(1);
+        // Combine the first character in uppercase with the rest of the string.
         const result = firstLetterCapitalized + restOfString;
+        // Return the new string with the first letter capitalized.
         return result;
     }
 
+    // Loop through recipes using a for loop.
     recipes.forEach(recipe => {
         recipe.ingredients.forEach(ingredientData => {
             uniqueIngredients.add(ingredientData.ingredient);
         });
 
+        // Loop through ustensils of each recipe.
         recipe.ustensils.forEach(ustensil => {
             const ustensilCapitalize = capitalizeFirstLetter(ustensil);
             uniqueUstensils.add(ustensilCapitalize);

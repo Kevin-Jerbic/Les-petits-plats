@@ -2,9 +2,6 @@ const url = '../../data/recipes.js';
 
 /**
  * Fetch recipe data from a specified URL.
- *
- * @async
- * @function fetchData
  * @returns {Promise<Array>} A promise that resolves to an array of recipe data.
  * @throws {Error} If there is an issue with the fetch operation.
  */

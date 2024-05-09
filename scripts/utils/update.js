@@ -5,25 +5,26 @@ import { fetchData } from './fetch.js';
 const dataRecipes = await fetchData();
 let recipesFilteredBySearch = [];
 
+
 /**
- * Update the view by displaying recipes, filters, and a counter based on the filtered data.
+ * Updates the view by displaying filtered recipes, filters, and counter.
  */
 export function updateView() {
     let recipesFiltered = recipesFilteredBySearch;
     const $recipesWrapper = document.querySelector('.recipes__wrapper');
     const $filtersWrapper = document.querySelector('.filters__wrapper');
 
-    // Display recipes, filters, and a counter based on filtered data
+    // Display recipes, filters, and counter
     displayRecipes($recipesWrapper, recipesFiltered);
     displayFilters($filtersWrapper, recipesFiltered);
     displayCounter(recipesFiltered);
 }
 
+
 /**
- * Update the search by applying search terms and tags to filter the data.
- *
- * @param {string} inputValue - The search term entered by the user.
- * @param {Array} tags - An array of tags to filter the data.
+ * Updates the search results based on the input value and tags.
+ * @param {string} inputValue - The value entered in the search input.
+ * @param {Array<string>} tags - The tags selected for filtering.
  */
 export function updateSearch(inputValue, tags) {
     removeNoResultMessage();
