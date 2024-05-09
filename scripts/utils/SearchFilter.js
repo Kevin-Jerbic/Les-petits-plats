@@ -1,13 +1,16 @@
 import { displayNoResult, removeNoResultMessage } from './display.js';
 
-export let recipesFiltered = []; //Le tableau des objets filtrés
-export let tagsList = []; // le tableau des tags selectionné
+// Array of filtered recipes
+export let recipesFiltered = []; 
+// Array of selected tags
+export let tagsList = []; 
 export let termValue = '';
+
 let recipesWithTag = [];
 let recipesWithTerms = [];
 
 export class SearchFilter {
-    //Initialise la classe avec toutes les data (50 recettes)
+    // The full list of recipes to filter
     constructor(dataRecipes) {
         this.fullRecipesData = dataRecipes;
     }
@@ -39,7 +42,8 @@ export class SearchFilter {
                     if (ingredientLowerCase.includes(searchTerm)) {
                         // If a matching ingredient is found, add the recipe to 'recipesFound'.
                         recipesFound.push(recipe);
-                        break; // Break the loop to prevent duplicate additions for the same recipe.
+                        // Break the loop to prevent duplicate additions for the same recipe.
+                        break; 
                     }
                 }
             }
@@ -73,10 +77,12 @@ export class SearchFilter {
 
         if (searchTags.length > 0) {
             for (let recipe of recipesToFilter) {
-                let allTagsFound = true; // Indicator to check if all tags are present in the recipe
+                // Indicator to check if all tags are present in the recipe
+                let allTagsFound = true; 
 
                 for (let searchTag of searchTags) {
-                    let tagFoundInRecipe = false; // Indicator to check if the tag is present in the recipe
+                    // Indicator to check if the tag is present in the recipe
+                    let tagFoundInRecipe = false; 
 
                     // Check if the tag is found in the ingredients of the recipe
                     for (let ingredient of recipe.ingredients) {

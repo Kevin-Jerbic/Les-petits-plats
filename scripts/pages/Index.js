@@ -1,7 +1,6 @@
 import { Header } from '../templates/Header.js';
 import { Main } from '../templates/Main.js';
 import { displayCounter, displayFilters, displayRecipes } from '../utils/display.js';
-
 import { fetchData } from '../utils/fetch.js';
 import { recipesFiltered, SearchFilter } from '../utils/SearchFilter.js';
 import { tagsList } from '../utils/SearchFilter.js';

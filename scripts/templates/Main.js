@@ -1,12 +1,18 @@
 import { displayFilters, displayRecipes } from '../utils/display.js';
 
-// Class representing the main content of the application.
+/**
+ * A class representing the main content of the application.
+ */
 export class Main {
     constructor(recipesData) {
         this.recipesData = recipesData;
     }
 
-    // Create the main content of the application, including filters, tags, and recipes.
+    /**
+     * Create the main content of the application, including filters, tags, and recipes.
+     *
+     * @returns {Object} - An object containing DOM elements for filters, tags, and recipes.
+     */
     async createMain() {
         const $filtersWrapper = document.createElement('div');
         $filtersWrapper.classList.add('filters__wrapper');
