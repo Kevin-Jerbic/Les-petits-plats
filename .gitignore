@@ -1,4 +1,4 @@
 node_modules
 eslint.config.mjs
-package.json
-package-lock.json
+jsbench_url.txt
+screenshot_project.png
