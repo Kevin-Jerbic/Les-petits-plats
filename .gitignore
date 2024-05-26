@@ -1,3 +1,5 @@
 node_modules
+eslint.config.mjs
+jsbench_url.txt
 screenshot_project.png
 pdf
