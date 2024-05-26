@@ -1,9 +1,6 @@
-# FishEye
+# Les petits plats
 
-## Projet 4
+## Projet 7
 
 *Développez un algorithme de recherche en JavaScript* : https://kevin-jerbic.github.io/Les-petits-plats/
-
-
-
 
