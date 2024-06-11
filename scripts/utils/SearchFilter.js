@@ -60,37 +60,31 @@ export class SearchFilter {
 
         if (searchTags.length > 0) {
             for (let recipe of recipesToFilter) {
-                // Indicator to check if all tags are present in the recipe
-                let allTagsFound = true; 
+                let allTagsFound = true;
 
                 for (let searchTag of searchTags) {
-                    // Indicator to check if the tag is present in the recipe
-                    let tagFoundInRecipe = false; 
+                    let tagFoundInRecipe = false;
+                    const searchTagToLowerCase = searchTag.toLowerCase();
 
-                    // Check if the tag is found in the ingredients of the recipe
                     for (let ingredient of recipe.ingredients) {
-                        const item = ingredient.ingredient;
-                        if (item.includes(searchTag)) {
+                        const item = ingredient.ingredient.toLowerCase();
+                        if (item.includes(searchTagToLowerCase)) {
                             tagFoundInRecipe = true;
                             break;
                         }
                     }
 
-                    // Check if the tag is found in the ustensils of the recipe
                     for (let ustensil of recipe.ustensils) {
-                        const searchTagsToLowerCase = searchTag.toLowerCase();
-                        if (ustensil.includes(searchTagsToLowerCase)) {
+                        if (ustensil.toLowerCase().includes(searchTagToLowerCase)) {
                             tagFoundInRecipe = true;
                         }
                     }
 
-                    // Check if the tag is found in appliance of the recipe
-                    if (recipe.appliance.includes(searchTag)) {
+                    if (recipe.appliance.toLowerCase().includes(searchTagToLowerCase)) {
                         tagFoundInRecipe = true;
                     }
 
                     if (!tagFoundInRecipe) {
-                        // If the tag is not found in any category, mark it as false
                         allTagsFound = false;
                         break;
                     }
